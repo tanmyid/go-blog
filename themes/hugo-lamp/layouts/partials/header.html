@@ -1,0 +1,35 @@
+<header class="header">
+  <p class="subtitle">{{ .Site.Params.titleName }}</p>
+  <p class="subtitle">{{ .Site.Params.subtitle }}</p>
+  <p class="subtitle about-me"><a href="/portfolio">{{ .Site.Params.portfolio }}</a></p>
+  <section class="social-btns">
+    <div>
+        <a href="https://twitter.com/tanmyid?ref_src=twsrc%5Etfw" class="twitter-follow-button"></a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div>
+      <a class="github-button" href="https://github.com/tanmyid" data-show-count="true" aria-label="Follow @tanmyid on GitHub">Follow @tanmyid</a>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </div>
+  </section>
+
+  <button class="menu-toggle" aria-hidden="true" type="button" on="tap:sidebar.open">
+    <span class="icon icon-menu"></span>
+  </button>
+
+  <!-- Sidebar is header on desktop -->
+  <nav class="menu">
+    <ul class="menu-list">
+      {{ $type := .Type }}
+      {{ $kind := .Kind }}
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <li
+        class="menu-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{ end }}{{ if and (eq .Identifier "home") (eq $type "post") }} is-active{{ end }}{{ if and (eq .Identifier "home") (and (eq $type "page") (eq $kind "taxonomy"))}} is-active{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+
+  </nav>
+
+</header>

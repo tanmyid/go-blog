@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Tan My ID"
+theme = "hugo-lamp"
+
+
+[params]
+  titleName = "Hai, aku Tan"
+  subtitle = "Mengisi waktu luang dengan menulis sesuatu yang mungkin berguna untuk anda."
+  author = "Tan My ID"
+  paginate = 10
+
+  # Social networks
+  github = "tanmyid"
+  instagram = "tandotid"
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"

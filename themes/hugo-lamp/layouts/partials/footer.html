@@ -1,0 +1,29 @@
+<footer class="footer">
+
+  <p>Copyright © {{ if eq now.Year 2018 }}2018{{ else }}2018-{{ now.Year }}{{ end }}</p>
+  {{ partial "social.html" . }}
+</footer>
+
+{{ partial "adsense-sticky.html" . }}
+
+{{ if .Site.GoogleAnalytics }}
+<amp-analytics type=googleanalytics>
+  <script type=application/json> { "vars" : { "account" : {{ .Site.GoogleAnalytics }} }, "triggers" : { "trackPageview"
+    : { "on" : "visible" , "request" : "pageview" } } } </script> </amp-analytics> <script
+    src="https://codefund.app/properties/273/funder.js" async="async"></script>
+
+  <amp-install-serviceworker src="/sw.js" layout="nodisplay">
+  </amp-install-serviceworker>
+  {{ end }}
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
