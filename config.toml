@@ -8,7 +8,7 @@ theme = "hugo-lamp"
   titleName = "Hai, aku Tan"
   subtitle = "Mengisi waktu luang dengan menulis sesuatu yang mungkin berguna untuk anda."
   author = "Tan My ID"
-  paginate = 10
+  paginate = 5
 
   # Social networks
   github = "tanmyid"
